@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Barber</title>
+    <link rel="stylesheet" href="estilos/style.css" />
+    <link rel="stylesheet" href="estilos/mediaquery.css" />
+    <link
+      rel="shortcut icon"
+      href="imagens/favicon-16x16.png"
+      type="image/x-icon"
+    />
+    <link
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--HEADER-->
+    <div id="topo"></div>
+    <section class="home-page" id="home">
+      <header class="header" id="header">
+        <div class="logo">
+          <img src="imagens/logoGugaSF.png" alt="DevBarber Logo" />
+        </div>
+        <label class="hamburger">
+          <input type="checkbox" id="checkbox" />
+          <svg viewBox="0 0 32 32">
+            <path
+              d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+              class="line line-top-bottom"
+            ></path>
+            <path d="M7 16 27 16" class="line"></path>
+          </svg>
+        </label>
+      </header>
+      <div class="menu-overlay">
+        <ul class="menu-links">
+          <li><a href="#home" class="menu-item">HOME</a></li>
+          <li>
+            <a href="#sobre" class="menu-item">SOBRE NÓS</a>
+          </li>
+          <li><a href="#serviços" class="menu-item">NOSSOS SERVIÇOS</a></li>
+          <li><a href="#agenda" class="menu-item">AGENDA</a></li>
+        </ul>
+      </div>
+      <!--HOME-->
+      <section class="hero-section">
+        <h1 class="txt-titulo">Agende já um horário para</h1>
+        <div class="txt-animado">fazer <span></span></div>
+        <p class="txt">Clique abaixo e garanta seu horário</p>
+        <a href="#agenda"
+          ><button class="btn-agenda">AGENDE UM HORÁRIO</button></a
+        >
+      </section>
+    </section>
+    <main>
+      <!--SOBRE-->
+      <section class="sobre" id="sobre">
+        <img id="faixada" src="imagens/faixadaCEl.jpg" alt="" />
+        <div class="home-dev">
+          <div class="txt-sobre">
+            <p>Sobre nós</p>
+            <h1>Guga Barbearia</h1>
+          </div>
+          <div class="barra"></div>
+        </div>
+
+        <p class="txt">
+          Na Barbearia do Guga, cada detalhe é pensado para você viver mais do que um
+          corte é estilo, cuidado e personalidade. Aqui tradição e modernidade
+          se encontram, trazendo técnicas atuais, atendimento de qualidade e um
+          ambiente feito pra você se sentir em casa. Guga Barbearia onde sua
+          confiança ganha forma.
+        </p>
+
+        <a href="#agenda"><button class="btn">AGENDE UM HORÁRIO</button></a>
+
+        <div class="carrossel">
+          <div class="slides">
+            <img src="imagens/cabelo1.png" alt="Descrição Imagem 1" />
+            <img src="imagens/cabelo4.png" alt="Descrição Imagem 2" />
+            <img src="imagens/cabelo2.png" alt="Descrição Imagem 3" />
+            <img src="imagens/cabelo3.png" alt="Descrição Imagem 3" />
+          </div>
+        </div>
+      </section>
+
+      <!--SERVIÇOS-->
+      <section class="serviços">
+        <h1>Nossos Serviços</h1>
+        <p id="serviços" class="txt-p">
+          Um pouco dos cuidados que oferecemos para valorizar seu estilo.
+        </p>
+        <div class="container">
+          <div class="cards">
+            <img
+              src="imagens/cabelo.png"
+              class="img-card"
+              alt="Imagem Cabelo"
+            />
+            <h2>Corte de Cabelo</h2>
+            <p>
+              Do clássico ao moderno, do social ao degrade, nosso
+              profissionalismo te oferecerá o melhor serviço e a experiência.
+            </p>
+          </div>
+          <div class="cards">
+            <img src="imagens/barba.png" class="img-card" alt="Imagem barba" />
+            <h2>Designe de Barba</h2>
+            <p>
+              Barba terapia ou barba simples, feita do estilo tradicional com
+              navalha, aplicação de toalha quente e produto de alta qualidade.
+            </p>
+          </div>
+          <div class="cards">
+            <img
+              src="imagens/sobrancelha.png"
+              class="img-card"
+              alt="Imagem sobrancelha"
+            />
+            <h2>Design de Sobrancelha</h2>
+            <p>Deixamos sua sobrancelha no estilo com o uso de navalha.</p>
+          </div>
+        </div>
+        <a href="#agenda"><button class="btn">AGENDE UM HORÁRIO</button></a>
+        <img
+          id="minhaImagem"
+          src="imagens/"
+          class="destaque"
+          alt=""
+        />
+      </section>
+
+      <!--PRODUTOS-->
+      <section class="produtos">
+        <h1>Produtos</h1>
+        <p id="serviços" class="txt-p">
+          Temos produtos de alta qualidade para garantir o melhor
+          cuidado para você.
+        </p>
+        <div class="container">
+          <div class="cards">
+            <img
+              src="imagens/produto01.png"
+              class="img-card"
+              alt="Imagem Cabelo"
+            />
+            <h2>Fox for Man Balm  para barba</h2>
+            <p>
+              
+            </p>
+          </div>
+          <div class="cards">
+            <img src="imagens/produto02.png" class="img-card" alt="Imagem barba" />
+            <h2>Million Loção pos barba</h2>
+            <p>
+              
+            </p>
+          </div>
+          <div class="cards">
+            <img
+              src="imagens/produto03.png"
+              class="img-card"
+              alt="Imagem sobrancelha"
+            />
+            <h2>Million Balm para barba</h2>
+            <p></p>
+          </div>
+          <div class="cards">
+            <img
+              src="imagens/produto04.png"
+              class="img-card"
+              alt="Imagem sobrancelha"
+            />
+            <h2>Fox for Man Óleo para barba</h2>
+            <p></p>
+          </div>
+          <div class="cards">
+            <img
+              src="imagens/produto05.png"
+              class="img-card"
+              alt="Imagem sobrancelha"
+            />
+            <h2>Two Brothers Gel cera hidratante</h2>
+            <p></p>
+          </div>
+          <div class="cards">
+            <img
+              src="imagens/produto06.png"
+              class="img-card"
+              alt="Imagem sobrancelha"
+            />
+            <h2>Pomada para cabebol de Morango</h2>
+            <p></p>
+          </div>
+        </div>
+        <a href="#agenda"><button class="btn">AGENDE UM HORÁRIO</button></a>
+      </section>
+
+      <!--AGENDA-->
+      <section class="agenda">
+        <h1>Agende um Horário</h1>
+
+        <iframe
+          id="agenda"
+          class="google-agenda"
+          src="https://calendar.google.com/calendar/embed?src=barberguga01%40gmail.com&ctz=America%2FSao_Paulo"
+          style="border: 0"
+          width="90%"
+          height="500"
+          frameborder="0"
+          scrolling="no"
+        >
+        </iframe>
+
+        <form id="bookingForm">
+          <h2>Agende</h2>
+
+          <label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Nome"
+            />
+          </label>
+
+          <label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Telefone"
+              required
+            />
+          </label>
+
+          <label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Selecione o serviço</option>
+              <option value="Corte Social" data-price="35">Corte Social - R$35</option>
+              <option value="Degradê" data-price="35">Degradê - R$35</option>
+              <option value="Degr. Navalhado" data-price="40">Degr. Navalhado - R$40</option>
+              <option value="Corte Infantil" data-price="30">Corte Infantil - R$30</option>
+              <option value="Barba" data-price="25">Barba - R$25</option>
+              <option value="Pézinho" data-price="10">Pézinho - R$10</option>
+              <option value="Sobrancelha" data-price="10">Sobrancelha - R$10</option>
+            </select>
+          </label>
+
+          <label>
+            <input type="date" id="date" name="date" placeholder="Dia" required />
+          </label>
+
+          <label>
+            <input type="time" id="time" name="time" placeholder="Horário" required />
+          </label>
+
+          <!-- Campo oculto que vai enviar o preço -->
+          <input type="hidden" id="price" name="price" />
+
+          <button type="button" id="submitBtn">Confirmar Agendamento</button>
+
+          <h3>
+            agendamentos somente em horário comercial.
+          </h3>
+
+          <p>
+            Segunda à sexta: 9:00 às 20:00 <br> Sábados: 9:00 às 17:00 <br> Domingos: Fechado
+          </p>
+        </form>
+      </section>
+      <iframe
+        class="google-maps"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1842.3051878355864!2d-47.908920049667366!3d-22.556263615917075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c7b1125fc194d3%3A0x9f6e05e8e92c004f!2sGuga%20barbearia!5e0!3m2!1spt-BR!2sbr!4v1763436709685!5m2!1spt-BR!2sbr"
+        width="400"
+        height="300"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <section class="footer">
+        <img src="imagens/logoGugaSF.png" alt="logo da Barbearia" />
+
+        <div class="linha"></div>
+        <h2>Contato</h2>
+        <p>(19) 99681-8430</p>
+
+        <div class="linha"></div>
+        <h2>Localização</h2>
+        <p>Av. Pres. Getulio vargas, 1381/ São Pedro-SP</p>
+        <!--<p>Barbearia@Dev.com.br</p>-->
+      </section>
+
+      <div class="direitos">
+        <p>
+          <small>&copy; 2025 DevBarber. Todos os direitos reservados.</small>
+        </p>
+      </div>
+    </main>
+
+    <a
+      href="https://wa.me/5519996818430?text=Olá%2C%20vim%20pelo%20site!"
+      class="button"
+      target="_blank"
+      aria-label="Fale conosco no WhatsApp"
+    >
+      <i class="ph ph-whatsapp-logo"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+  const form = document.getElementById("bookingForm");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const service = document.getElementById("service").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+
+    const data = { name, phone, service, date, time };
+
+    try {
+      const response = await fetch("https://devbarber.onrender.com/agendar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      alert(result.message || "Agendamento criado com sucesso!");
+      form.reset();
+
+      setTimeout(() => {
+        window.open(urlWhatsApp, "_blank"); 
+      }, 1000);
+    } catch (err) {
+      alert("Erro ao enviar o agendamento 😢");
+      console.error(err);
+    }
+  });
+</script>
+    <div id="loadingScreen">
+      <div class="dot-spinner">
+        <div class="dot-spinner__dot"></div>
+        <div class="dot-spinner__dot"></div>
+        <div class="dot-spinner__dot"></div>
+        <div class="dot-spinner__dot"></div>
+        <div class="dot-spinner__dot"></div>
+        <div class="dot-spinner__dot"></div>
+        <div class="dot-spinner__dot"></div>
+        <div class="dot-spinner__dot"></div>
+      </div>
+    </div>
+  </body>
+</html>

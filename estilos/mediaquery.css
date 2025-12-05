@@ -1,0 +1,404 @@
+@charset "UTF-8";
+
+@charset "UTF-8";
+
+/*Typical Device Breakpoints
+
+    Pequenas telas: até 600px
+    celular: de 600px até 768
+    Tablet: 768px até 992px
+    Desktop: 992px até 1200px
+    Telas grandes: acima de 1200px
+
+*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /*TABLET*/
+  .logo img {
+    width: 250px;
+  }
+
+  .menu-item {
+    font-size: 2em;
+  }
+
+  .btn-agenda {
+    width: 300px;
+    height: 80px;
+    font-size: 1.5em;
+  }
+
+  .sobre img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .sobre .home-dev .barra {
+  width: 65vw;
+  border-top: 5px solid red;
+}
+
+.sobre .home-dev .txt-sobre p {
+    font-size: 1.25em;
+}
+
+.sobre .home-dev .txt-sobre h1 {
+    font-size: 2.25em;
+}
+
+.sobre .btn {
+  width: 200px;
+  height: 70px;
+}
+
+.produtos .txt-p {
+  font-size: 1.25em;
+  width: 500px;
+}
+
+.produtos img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.produtos .btn {
+  width: 200px;
+  height: 70px;
+}
+
+.produtos .txt-p {
+  font-size: 1.25em;
+  width: 500px;
+}
+
+.produtos img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.produtos .btn {
+  width: 200px;
+  height: 70px;
+}
+
+.agenda h1 {
+    font-size: 2em;
+}
+
+#bookingForm {
+    width: 60vw;
+}
+
+.google-maps {
+    width: 90vw;
+}
+
+.footer img {
+    width: 150px;
+}
+
+.footer .linha {
+      border-bottom: 3px solid white;
+}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  :root {
+    --faixada: url(../imagens/faixada2.png);
+    --fundo-serviço: url(../imagens/servicos.png);
+  }
+  /*DESKTOP*/
+  .home-page {
+    background: var(--faixada);
+    margin-bottom: 100px;
+  }
+
+  .logo img {
+    width: 300px;
+  }
+
+  .menu-item {
+    font-size: 2.25em;
+  }
+
+  .btn-agenda {
+    width: 350px;
+    height: 80px;
+    font-size: 1.5em;
+  }
+
+  .sobre {
+    margin-bottom: 100px;
+  }
+
+  .sobre img {
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .sobre .home-dev .barra {
+  width: 65vw;
+  border-top: 5px solid red;
+}
+
+.sobre .home-dev .txt-sobre p {
+    font-size: 1.5em;
+}
+
+.sobre .home-dev .txt-sobre h1 {
+    font-size: 2.5em;
+}
+
+.sobre .btn {
+  width: 250px;
+  height: 70px;
+}
+
+.serviços {
+ margin-bottom: 100px;
+ background: var(--fundo-serviço) no-repeat center center / cover;
+}
+
+.serviços .txt-p {
+  font-size: 1.5em;
+  width: 500px;
+}
+
+.serviços img {
+  height: 350px;
+  object-fit: cover;
+}
+
+.serviços .btn {
+  width: 250px;
+  height: 70px;
+}
+
+.produtos {
+ margin-bottom: 100px;
+ background: var(--fundo-serviço) no-repeat center center / cover;
+}
+
+.produtos .txt-p {
+  font-size: 1.5em;
+  width: 500px;
+}
+
+.produtos img {
+  height: 350px;
+  object-fit: cover;
+}
+
+.produtos .btn {
+  width: 250px;
+  height: 70px;
+}
+
+.agenda {
+    margin-bottom: 100px;
+}
+
+.agenda h1 {
+    font-size: 2.25em;
+}
+
+#bookingForm {
+    width: 60vw;
+}
+
+.google-maps {
+    width: 90vw;
+    margin-bottom: 100px;
+}
+
+.footer img {
+    width: 200px;
+}
+
+.footer .linha {
+      border-bottom: 3px solid white;
+}
+
+.button {
+    width: 70px;
+    height: 70px;
+}
+
+.button i {
+    font-size: 50px;
+}
+
+.button:hover::before {
+    font-size: 20px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --faixada: url(../imagens/faixada2.png);
+    --fundo-serviço: url(../imagens/fundo-homeG.png);
+  }
+  /*TELAS GRANDES*/
+  .home-page {
+    margin-bottom: 100px;
+    background-image: var(--faixada);
+  }
+
+  .logo img {
+    width: 250px;
+  }
+
+  .menu-item {
+    font-size: 2.25em;
+  }
+
+  .btn-agenda {
+    width: 350px;
+    height: 80px;
+    font-size: 1.5em;
+  }
+
+  .sobre {
+    margin-bottom: 100px;
+  }
+
+  .sobre img {
+    height: 350px;
+    object-fit: cover;
+  }
+  
+  .sobre .txt {
+    font-size: 1.5em;
+  }
+
+  .sobre .home-dev .barra {
+  width: 65vw;
+  border-top: 5px solid red;
+}
+
+.sobre .home-dev .txt-sobre p {
+    font-size: 1.5em;
+}
+
+.sobre .home-dev .txt-sobre h1 {
+    font-size: 2.5em;
+}
+
+.sobre .btn {
+  width: 250px;
+  height: 70px;
+  margin-bottom: 50px;
+}
+
+.carousel-inner img {
+  height: 350px;
+  object-fit: cover;
+}
+
+.serviços {
+ margin-bottom: 100px; 
+}
+
+.serviços p {
+  width: 90%;
+}
+
+.serviços .txt-p {
+  font-size: 1.5em;
+  width: 500px;
+}
+
+.serviços img {
+  height: 350px;
+  object-fit: cover;
+}
+
+.serviços .btn {
+  width: 250px;
+  height: 70px;
+}
+
+.serviços .cards {
+  max-width: 550px;
+}
+
+.serviços .img-card {
+  max-width: 200px;
+  margin: 5px;
+}
+
+.produtos {
+ margin-bottom: 100px; 
+}
+
+.produtos p {
+  width: 90%;
+}
+
+.produtos .txt-p {
+  font-size: 1.5em;
+  width: 500px;
+}
+
+.produtos img {
+  height: 350px;
+  object-fit: cover;
+}
+
+.produtos .btn {
+  width: 250px;
+  height: 70px;
+}
+
+.produtos .cards {
+  max-width: 400px;
+}
+
+.produtos .img-card {
+  max-width: 200px;
+  margin: 5px;
+}
+
+.agenda {
+    margin-bottom: 100px;
+}
+
+.agenda h1 {
+    font-size: 2.25em;
+}
+
+.google-agenda {
+  width: 60vw;
+}
+
+
+#bookingForm {
+    width: 40vw;
+}
+
+.google-maps {
+    width: 90vw;
+    margin-bottom: 100px;
+}
+
+.footer img {
+    width: 200px;
+}
+
+.footer .linha {
+      border-bottom: 3px solid white;
+}
+
+.button {
+    width: 70px;
+    height: 70px;
+}
+
+.button i {
+    font-size: 50px;
+}
+
+.button:hover::before {
+    font-size: 20px;
+}
+}
