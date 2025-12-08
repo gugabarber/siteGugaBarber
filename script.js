@@ -163,7 +163,7 @@ document.getElementById("bookingForm").addEventListener("submit", async (e) => {
   const data = { name, phone, service, date, time };
 
   try {
-    const response = await fetch("https://devbarber.onrender.com/agendar", {
+    const response = await fetch("https://sitegugabarber.onrender.com/agendar", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -193,7 +193,7 @@ document.getElementById("submitBtn").addEventListener("click", async (e) => {
   const data = { name, phone, service, date, time };
 
   try {
-    const response = await fetch("https://devbarber.onrender.com/agendar", {
+    const response = await fetch("https://sitegugabarber.onrender.com/agendar", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
