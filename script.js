@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const button = document.getElementById('whatsappButton');
   if (!button) return;
 
-  const threshold = 200; // px de rolagem antes de aparecer (ajuste se quiser)
+  const threshold = 200; 
 
   // função que verifica scroll e alterna a classe
   function checkScroll() {
@@ -56,9 +56,9 @@ function trocarImg() {
   if (larguraTela < 768) {
     imagem.src = 'imagens/faixadaCEl.jpg'; // celular
   } else if (larguraTela < 1200) {
-    imagem.src = 'imagens/faixadaCEl2.jpg'; // tablet
+    imagem.src = 'imagens/faixadaCEl2.png'; // tablet
   } else {
-    imagem.src = 'imagens/faixadaCEl3.jpg'; // desktop
+    imagem.src = 'imagens/faixadaCEl3.png'; // desktop
   }
 }
 
@@ -75,29 +75,79 @@ function trocarImg() {
     }
   }
 
+  //redimensiona as imagens do carrossel
+function trocarImagem() {
+  const imagem = document.getElementById('carrossel1');
+  const larguraTela = window.innerWidth;
+
+  if (larguraTela < 768) {
+    imagem.src = 'imagens/cabelo1.png'; // celular
+  } else if (larguraTela < 1200) {
+    imagem.src = 'imagens/cabelo1M.png'; // tablet
+  } else {
+    imagem.src = 'imagens/cabelo1G.png'; // desktop
+  }
+}
+
+function trocarImagem() {
+  const imagem = document.getElementById('carrossel2');
+  const larguraTela = window.innerWidth;
+
+  if (larguraTela < 768) {
+    imagem.src = 'imagens/cabelo4.png'; // celular
+  } else if (larguraTela < 1200) {
+    imagem.src = 'imagens/cabelo4M.png'; // tablet
+  } else {
+    imagem.src = 'imagens/cabelo4G.png'; // desktop
+  }
+}
+
+function trocarImagem() {
+  const imagem = document.getElementById('carrossel3');
+  const larguraTela = window.innerWidth;
+
+  if (larguraTela < 768) {
+    imagem.src = 'imagens/cabelo2.png'; // celular
+  } else if (larguraTela < 1200) {
+    imagem.src = 'imagens/cabelo2M.png'; // tablet
+  } else {
+    imagem.src = 'imagens/cabelo2G.png'; // desktop
+  }
+}
+
+function trocarImagem() {
+  const imagem = document.getElementById('carrossel4');
+  const larguraTela = window.innerWidth;
+
+  if (larguraTela < 768) {
+    imagem.src = 'imagens/cabelo3.png'; // celular
+  } else if (larguraTela < 1200) {
+    imagem.src = 'imagens/cabelo3M.png'; // tablet
+  } else {
+    imagem.src = 'imagens/cabelo3G.png'; // desktop
+  }
+}
+
 const slidesContainer = document.querySelector('.slides');
 const slides = document.querySelectorAll('.slides img');
-const slideWidth = slides[0].clientWidth; // Pega a largura de um slide
-let index = 0; // Índice do slide atual
-const tempoTroca = 5000; // Tempo em milissegundos (3 segundos)
+const slideWidth = slides[0].clientWidth; 
+let index = 0; 
+const tempoTroca = 5000; 
 
 function mostrarSlide() {
-  // Calcula o quanto o contêiner de slides deve se mover (em pixels)
-  // O movimento é a largura de um slide * o índice atual
   const offset = -index * slideWidth;
   slidesContainer.style.transform = `translateX(${offset}px)`;
 }
 
 // 🔁 Função de Carrossel Automático
 function proximoSlideAutomatico() {
-  index = (index + 1) % slides.length; // Avança para o próximo, voltando ao 0 se chegar ao final
+  index = (index + 1) % slides.length;
   mostrarSlide();
 }
 
 // Inicia a troca automática
 setInterval(proximoSlideAutomatico, tempoTroca);
 
-  // Troca quando carregar e quando redimensionar
   window.addEventListener('load', trocarImagem);
   window.addEventListener('resize', trocarImagem);
 
