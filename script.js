@@ -206,7 +206,7 @@ document.getElementById("submitBtn").addEventListener("click", async (e) => {
     // ✅ Só redireciona pro WhatsApp se o backend retornar sucesso
     if (response.ok && result.message.includes("sucesso")) {
       const msg = `Olá! Meu nome é ${name}, marquei um ${service} para o dia ${formattedDate} às ${time}.`;
-      const numeroBarbeiro = "5519996462753";
+      const numeroBarbeiro = "5519996818430";
       const url = `https://wa.me/${numeroBarbeiro}?text=${encodeURIComponent(msg)}`;
 
       // Redireciona pro WhatsApp (1 segundo depois do alerta)
