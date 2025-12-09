@@ -43,13 +43,34 @@ const CALENDAR_ID = process.env.CALENDAR_ID;
 const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
 const SHEET_NAME = process.env.SHEET_NAME || "Agendamentos";
 
-function horarioValido(dateStr, timeStr) {
+/*function horarioValido(dateStr, timeStr) {
     const date = new Date(`${dateStr}T${timeStr}:00-03:00`);
     const dia = date.getDay();
     const hora = date.getHours();
     if (dia === 0) return false;
     if (dia >= 1 && dia <= 5) return hora >= 9 && hora < 20;
     if (dia === 6) return hora >= 9 && hora < 17;
+    return false;
+}*/
+
+function horarioValido(dateStr, timeStr) {
+    const [year, month, day] = dateStr.split("-").map(Number);
+    const [hour, minute] = timeStr.split(":").map(Number);
+
+    const date = new Date(year, month - 1, day, hour, minute);
+
+    const dia = date.getDay();   
+    const hora = date.getHours();
+    const minuto = date.getMinutes();
+
+    if (dia === 0) return false;
+
+    if (dia >= 1 && dia <= 5)
+        return hora >= 9 && (hora < 20 || (hora === 19 && minuto <= 59));
+
+    if (dia === 6)
+        return hora >= 9 && (hora < 17 || (hora === 16 && minuto <= 59));
+
     return false;
 }
 
