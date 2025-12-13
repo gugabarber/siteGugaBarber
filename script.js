@@ -272,6 +272,81 @@ async function handleAgendamento(event) {
   }
 }
 
+const btn = document.getElementById('submitBtn');
+btn.addEventListener("click", async () => {
+  if (btn.classList.contains('loading')) return; // previne múltiplos cliques
+
+  btn.classList.add('loading');
+  btn.diaabled = true;
+
+  try {
+    await enviarAgendamento(); // função que envia o agendamento
+
+    // sucesso
+    btn.classList.remove('loading');
+    btn.classList.add('success');
+
+    setTimeout(() => {
+      document.getElementById('bookingForm').reset();
+  }, 1000);
+  } catch (error) {
+    alert("Erro ao enviar agendamento");
+
+    btn.classList.remove('loading');
+    btn.diaabled = false;
+  }
+});
+
+function enviarAgendamento() {
+  return new Promise((resolve) => {
+    setTimeout(resolve, 2500);
+  })
+}
+
+const MODO_TESTE = true;
+
+function enviarAgendamento(dados) {
+  return new Promise((resolve, reject) => {
+    if (MODO_TESTE) {
+      console.log("modo teste ativo");
+      console.log("dados do formulario:", dados);
+      setTimeout(() => {
+        resolve("Ok");
+      }, 2000);
+    } else {
+      enviarParaGoogle(dados)
+      .then(resolve)
+      .catch(reject);
+    }
+  });
+}
+
+btn.addEventListener("click", async () => {
+  btn.classList.add("loading");
+  btn.disabled = true;
+
+  const dados = {
+    nome: name.value,
+    telefone: phone.value,
+    servico: service.value,
+    data: date.value,
+    horario: time.value,
+    preco: price.value
+  };
+
+  try {
+    await enviarAgendamento(dados);
+
+    btn.classList.remove("loading");
+    btn.classList.add("success");
+
+  } catch (err) {
+    alert("Erro no envio");
+    btn.classList.remove("loading");
+    btn.disabled = false;
+  }
+});
+
 
 
 

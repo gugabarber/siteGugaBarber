@@ -659,6 +659,10 @@ div.txt-animado {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   transition: background 0.3s, transform 0.2s;
 }
 
@@ -666,6 +670,50 @@ div.txt-animado {
   background: #123f68;
   box-shadow: 0 0 15px #ad0000;
   transform: scale(1.03);
+}
+
+.btn-loader {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgb(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.btn-seccess {
+  display: none;
+  font-size: 20px;
+  color: #00ff88;
+}
+
+.loading .btn-loader {
+  display: inline-block;
+}
+
+.loading .btn-text {
+  opacity: 0.7;
+}
+
+.success {
+  background: #28a745 !important;
+}
+
+.success .btn-loader {
+  display: none;
+}
+
+.success .btn-text {
+  display: none;
+}
+
+.success .btn-success {
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #bookingForm h3 {
