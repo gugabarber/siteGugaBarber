@@ -16,7 +16,7 @@ const { client_secret, client_id, redirect_uris } = credentials.web;
 const oAuth2Client = new google.auth.OAuth2(
     client_id,
     client_secret,
-    redirect_uris[0] 
+    redirect_uris[0]
 );
 
 const SCOPES = [
@@ -26,17 +26,12 @@ const SCOPES = [
 
 const TOKEN_PATH = path.join(__dirname, "token.json");
 
-if (fs.existsSync(TOKEN_PATH)) {
-    console.log("✅ Token já existe. Pode rodar o server.js.");
-    process.exit(0);
-}
-
 const app = express();
 
 const authUrl = oAuth2Client.generateAuthUrl({
-    access_type: "offline",
+    access_type: "offline", 
     scope: SCOPES,
-    prompt: "consent", 
+    prompt: "consent",      
 });
 
 console.log("🔗 Autorize o app acessando:");
@@ -47,13 +42,17 @@ app.get("/oauth2callback", async (req, res) => {
         const code = req.query.code;
 
         const { tokens } = await oAuth2Client.getToken(code);
-        oAuth2Client.setCredentials(tokens);
+
+        if (!tokens.refresh_token) {
+            throw new Error("❌ Refresh token NÃO foi retornado!");
+        }
 
         fs.writeFileSync(TOKEN_PATH, JSON.stringify(tokens, null, 2));
 
-        res.send("✅ Token gerado com sucesso! Pode fechar esta aba.");
-        console.log("✅ Token salvo em token.json");
+        console.log("✅ Token gerado com sucesso!");
+        console.log("🔑 Refresh Token:", tokens.refresh_token);
 
+        res.send("✅ Token gerado com sucesso! Pode fechar esta aba.");
         process.exit(0);
     } catch (error) {
         console.error("❌ Erro ao gerar token:", error);

@@ -43,15 +43,14 @@ const CALENDAR_ID = process.env.CALENDAR_ID;
 const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
 const SHEET_NAME = process.env.SHEET_NAME || "Agendamentos";
 
-/*function horarioValido(dateStr, timeStr) {
-    const date = new Date(`${dateStr}T${timeStr}:00-03:00`);
-    const dia = date.getDay();
-    const hora = date.getHours();
-    if (dia === 0) return false;
-    if (dia >= 1 && dia <= 5) return hora >= 9 && hora < 20;
-    if (dia === 6) return hora >= 9 && hora < 17;
-    return false;
-}*/
+oAuth2Client.on("tokens", (tokens) => {
+    if (tokens.refresh_token) {
+        console.log("🔁 Novo refresh_token recebido");
+    }
+    if (tokens.access_token) {
+        console.log("♻️ Access token renovado automaticamente");
+    }
+});
 
 function horarioValido(dateStr, timeStr) {
     const [year, month, day] = dateStr.split("-").map(Number);

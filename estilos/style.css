@@ -672,48 +672,76 @@ div.txt-animado {
   transform: scale(1.03);
 }
 
+
+/* --- ESTADOS DO BOTÃO --- */
+
+/* 1. Estado Inicial */
+.btn-loader, .btn-success {
+  display: none;
+}
+
 .btn-loader {
   width: 18px;
   height: 18px;
-  border: 3px solid rgb(255, 255, 255, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+  vertical-align: middle;
+  margin-left: 10px;
 }
 
-.btn-seccess {
-  display: none;
-  font-size: 20px;
-  color: #00ff88;
-}
-
+/* 2. Estado de Loading (Girando) */
 .loading .btn-loader {
   display: inline-block;
 }
-
 .loading .btn-text {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
+/* 3. Estado de Sucesso (Verde + Check) */
 .success {
-  background: #28a745 !important;
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+  color: white !important;
 }
-
-.success .btn-loader {
-  display: none;
+.success .btn-text, .success .btn-loader {
+  display: none !important;
 }
-
-.success .btn-text {
-  display: none;
-}
-
 .success .btn-success {
   display: inline-block;
+  animation: popIn 0.3s ease-out;
 }
 
+/* 4. Estado de Erro (Vermelho + Tremor) */
+.error {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  color: white !important;
+  animation: shake 0.4s ease-in-out;
+}
+.error .btn-text {
+  opacity: 1 !important;
+}
+.error .btn-loader, .error .btn-success {
+  display: none !important;
+}
+
+/* --- ANIMAÇÕES --- */
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); }
+  100% { transform: scale(1.2); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
 }
 
 #bookingForm h3 {
