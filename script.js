@@ -91,10 +91,10 @@ if (slidesContainer && slides.length > 0) {
   }, 5000);
 }
 
-// --- 6. LÓGICA DE AGENDAMENTO (O CORAÇÃO DO SEU PEDIDO) ---
+// --- 6. LÓGICA DE AGENDAMENTO ---
 
 async function enviarAgendamento(dados) {
-  // IMPORTANTE: Mude para 'false' quando o site for ao ar
+ 
   const MODO_TESTE = false;
 
   if (MODO_TESTE) {
@@ -159,7 +159,7 @@ if (btnSubmit) {
       }
 
     } catch (error) {
-      // SE DER ERRO, O SÍMBOLO DE SUCESSO NUNCA APARECE
+
       console.error(error);
       alert("Erro ao enviar agendamento. Tente novamente.");
       btnSubmit.classList.remove("loading");
