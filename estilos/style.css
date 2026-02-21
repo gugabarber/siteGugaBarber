@@ -797,7 +797,7 @@ div.txt-animado {
 .footer p {
   font-size: clamp(16px, 1.5vw, 20px);
   color: white;
-  
+  text-decoration: none;
 }
 
 .direitos {
