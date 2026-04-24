@@ -58,7 +58,7 @@ function horarioValido(dateStr, timeStr) {
 
     const date = new Date(year, month - 1, day, hour, minute);
 
-    const dia = date.getDay();   
+    const dia = date.getDay();
     const hora = date.getHours();
     const minuto = date.getMinutes();
 
@@ -87,7 +87,7 @@ app.post("/agendar", async (req, res) => {
         }
 
         const startDateTime = new Date(`${date}T${time}:00-03:00`);
-        const endDateTime = new Date(startDateTime.getTime() + 60 * 60000);
+        const endDateTime = new Date(startDateTime.getTime() + 30 * 60000);
 
         const events = await calendar.events.list({
             calendarId: CALENDAR_ID,
